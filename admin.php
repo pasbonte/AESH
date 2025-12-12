@@ -7,7 +7,7 @@ if (!isAdmin()) {
 
 $pdo = getDB();
 
-// Traitement suppression élève !!!!!!!!!!! ******** --------
+// Traitement suppression élève !!!!!!!!!!! ******** --------***********-----------
 if (isset($_GET['delete']) && is_numeric($_GET['delete'])) {
     $stmt = $pdo->prepare("DELETE FROM eleves WHERE id = ?");
     $stmt->execute([$_GET['delete']]);
